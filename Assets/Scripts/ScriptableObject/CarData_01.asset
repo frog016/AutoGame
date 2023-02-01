@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba2b0a66eb05fd44b2c512ae41897d3, type: 3}
   m_Name: CarData_01
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   initalSpeed: 10
-  maxSpeed: 20
+  maxSpeed: 100
   accelerationSpeed: 10
   decelerationSpeed: 10
   maxFuelTank: 10
