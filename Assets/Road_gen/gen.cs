@@ -11,7 +11,7 @@ public class gen : MonoBehaviour
     public int segmentCount;
     public float maxHeight;
     public float segmentDist;
-    public Vector3[] vertexes;
+    public Vector3[] vertices;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class gen : MonoBehaviour
         BezierPath path = GeneratePath(generatePoints(segmentCount, maxHeight, segmentDist));
         GetComponent<PathCreator>().bezierPath = path;
         GenerateCollider(path);
+        CreateBackGroundMesh();
         BackgroundStretch();
     }
     Vector2[] generatePoints(int segmentCount, float maxHeight, float segmentDist){
@@ -41,14 +42,14 @@ public class gen : MonoBehaviour
     }
 
     public void GenerateCollider(BezierPath path){
-        VertexPath vertexPath = new VertexPath(path,this.transform,0.3f);
+        VertexPath vertexPath = new VertexPath(path,this.transform,0.5f);
         int count = vertexPath.NumPoints;
         List<Vector2> list = new List<Vector2>();
-        vertexes = new Vector3[count];
+        vertices = new Vector3[count];
         for (int i = 0; i < count; i++)
         {
             list.Add(vertexPath.GetPoint(i));
-            vertexes[i] = vertexPath.GetPoint(i);
+            vertices[i] = vertexPath.GetPoint(i);
         }
         edgeCollider2D.SetPoints(list);
         // visualise
@@ -57,12 +58,42 @@ public class gen : MonoBehaviour
     public void BackgroundStretch(){
         SpriteRenderer rendrer =  background.GetComponent<SpriteRenderer>();
         Vector2 last = rendrer.size;
-        last.x = vertexes[vertexes.Length - 1].x;
+        last.x = vertices[vertices.Length - 1].x;
         Vector3 center = background.transform.position;
         center.x = last.x  / 2;
         background.transform.position = center;
         rendrer.size = last;
-        Debug.Log(last);
+    }
+    public void CreateBackGroundMesh(){
+        Vector3[] meshVertices = new Vector3[vertices.Length * 6];
+        int[] triangles = new int[((vertices.Length * 2) - 2) * 3];
+        for (int i = 0; i < vertices.Length; i++){
+            meshVertices[i] = vertices[i];
+        }
+        for (int i = 0; i < vertices.Length; i++){
+            meshVertices[i+vertices.Length] = new Vector3(vertices[i].x, -30);
+        }
+        int counter = 0;
+        for (int i = 0; i < ((vertices.Length * 2) - 2) * 3; i +=6){
+            int len = vertices.Length;
+            triangles[i] = counter;
+            triangles[i + 1] = counter + 1;
+            triangles[i + 2] = len + counter;
+            triangles[i + 3] = len + counter;
+            triangles[i + 4] = counter + 1;
+            triangles[i + 5] = len + 1 + counter;
+            counter++;
+        }
+        
+        Mesh mesh = new Mesh();
+        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
+        mesh.vertices = meshVertices;
+        mesh.triangles = triangles;
+        meshFilter.mesh = mesh;
+        for (int i = 0; i < triangles.Length; i += 3){
+            Debug.LogFormat("{0};{1};{2}", triangles[i], triangles[i + 1],triangles[i + 2]);
+        }
+
     }
 
 }
