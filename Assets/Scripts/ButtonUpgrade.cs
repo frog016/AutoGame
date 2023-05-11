@@ -19,7 +19,7 @@ public class ButtonUpgrade : MonoBehaviour
                 PlayerPrefs.SetFloat(upgrade, currentUpgrade + 0.04f);
                 break;
             case "tireUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade * 1.2f);
+                PlayerPrefs.SetFloat(upgrade, currentUpgrade + 0.02f);
                 break;
             case "chassisUpgrade":
                 PlayerPrefs.SetFloat(upgrade, currentUpgrade - 0.04f);

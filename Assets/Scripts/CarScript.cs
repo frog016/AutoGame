@@ -36,13 +36,14 @@ public class CarScript : MonoBehaviour
             accelerationUpgrade = PlayerPrefs.GetFloat("accelerationUpgrade");
         }
         if (PlayerPrefs.HasKey("tireUpgrade")) {
-            brakeUpgrade = PlayerPrefs.GetFloat("tireUpgrade");
+            tireUpgrade = PlayerPrefs.GetFloat("tireUpgrade");
+            accelerationUpgrade += tireUpgrade % 1;
         }
         if (PlayerPrefs.HasKey("chassisUpgrade")) {
-            brakeUpgrade = PlayerPrefs.GetFloat("chassisUpgrade");
+            chassisUpgrade = PlayerPrefs.GetFloat("chassisUpgrade");
         }
         if (PlayerPrefs.HasKey("fuelUpgrade")) {
-            brakeUpgrade = PlayerPrefs.GetFloat("fuelUpgrade");
+            fuelUpgrade = PlayerPrefs.GetFloat("fuelUpgrade");
         }
     }
 
@@ -83,7 +84,7 @@ public class CarScript : MonoBehaviour
         }
         else if (ControlCar[1].clickedIs == true && backWheel.motorSpeed < 0)
         {
-            backWheel.motorSpeed = Mathf.Clamp(backWheel.motorSpeed + brakeForce * brakeUpgrade * Time.deltaTime, maxSpeed * maxSpeedUpgrade, 0);
+            backWheel.motorSpeed = Mathf.Clamp(backWheel.motorSpeed + brakeForce * Time.deltaTime, maxSpeed * maxSpeedUpgrade, 0);
         }
 
         wheelJoints[1].motor = backWheel;
