@@ -13,27 +13,52 @@ public class gen : MonoBehaviour
     public float segmentDist;
     public Vector3[] vertices;
 
+    public GameObject[] road_blocks;
+    public int chance;
+    public GameObject marker;
+
     // Start is called before the first frame update
     void Start()
     {
         edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
-        BezierPath path = GeneratePath(generatePoints(segmentCount, maxHeight, segmentDist));
+        BezierPath path = GeneratePath(GeneratePoints(segmentCount, maxHeight, segmentDist));
         GetComponent<PathCreator>().bezierPath = path;
         GenerateCollider(path);
         CreateBackGroundMesh();
         BackgroundStretch();
+        
     }
-    Vector2[] generatePoints(int segmentCount, float maxHeight, float segmentDist){
+
+    Vector2[] GeneratePoints(int segmentCount, float maxHeight, float segmentDist){
         Vector2 point = GetComponent<Transform>().position;
         float len = segmentDist;
-        Vector2[] positions = new Vector2[segmentCount];
-        positions[0] = point;
+        List<Vector2> positions = new List<Vector2>();
+        positions.Add(point);
         for(var i = 1; i < segmentCount; i++){
-            Vector2 new_point = new Vector2(point.x + len, Random.Range(0, maxHeight));
-            len += segmentDist;
-            positions[i] = new_point;
+            if(Random.Range(0,100) < chance){
+                float road_y = Random.Range(0, maxHeight);
+                float road_x = point.x + len;
+                var obj = Instantiate(road_blocks[Random.Range(0,road_blocks.Length)],new Vector2(road_x,road_y), new Quaternion());
+                Vector2[] road = obj.GetComponent<prefab_data>().road;
+                positions.Add(new Vector2(road_x,road_y + road[0].y));
+                Instantiate(marker, new Vector2(road_x,road_y), new Quaternion());
+                for (var j = 1; j < road.Length; j++){
+                    float seg_len = road[j].x - road[j-1].y;
+                    Debug.LogFormat(" Len {0}",seg_len);
+                    positions.Add(new Vector2(road_x + seg_len,road_y+ road[j].y));
+                    Instantiate(marker, new Vector2(road_x + seg_len,road_y+road[j].y), new Quaternion());
+                    len += seg_len;
+                    
+                }
+                len += segmentDist;
+            }
+            else{
+                Vector2 new_point = new Vector2(point.x + len, Random.Range(0, maxHeight));
+                len += segmentDist;
+                positions.Add(new_point);
+            }
         }
-        return positions;
+        return positions.ToArray();
     }
 
     BezierPath GeneratePath(Vector2[] points){
@@ -90,9 +115,6 @@ public class gen : MonoBehaviour
         mesh.vertices = meshVertices;
         mesh.triangles = triangles;
         meshFilter.mesh = mesh;
-        for (int i = 0; i < triangles.Length; i += 3){
-            Debug.LogFormat("{0};{1};{2}", triangles[i], triangles[i + 1],triangles[i + 2]);
-        }
 
     }
 
