@@ -21,11 +21,18 @@ public class CarScript : MonoBehaviour
     private float fuelUpgrade = 1;
     private float tireUpgrade = 1;
     private float chassisUpgrade = 1;
+    public int maxHealth = 150;
+    public int health { get { return currentHealth; } }
+    int currentHealth;
+
+    //public float fuel = 3;
+    //public float fuelconsumption = 1f;
 
     public ClickScript[] ControlCar;
 
     void Start()
     {
+        currentHealth = 100;
         wheelJoints = gameObject.GetComponents<WheelJoint2D>();
         backWheel = wheelJoints[1].motor;
         frontWheel = wheelJoints[0].motor;
@@ -89,5 +96,15 @@ public class CarScript : MonoBehaviour
 
         wheelJoints[1].motor = backWheel;
         wheelJoints[0].motor = frontWheel;
+
+        //fuel -= fuelconsumption * Mathf.Abs(movement) * Time.fixedDeltaTime;
     }
+
+    public void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        HealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
 }   
