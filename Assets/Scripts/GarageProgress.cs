@@ -8,16 +8,11 @@ public class GarageProgress : MonoBehaviour
     public Text textToEdit;
     public Text textToEditOne;
     private int totalClick;
-
-    void Start()
-    {
-        textToEdit = GetComponentInChildren<Text>();
-        textToEditOne = GetComponentInChildren<Text>();
-    }
+    private int maxClick = 14;
 
     public void ChangeText()
     {
-        if (totalClick < 14)
+        if (totalClick < maxClick)
         {
             totalClick += 1;
             textToEdit.text = totalClick.ToString();
