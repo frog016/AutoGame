@@ -12,7 +12,6 @@ public class gen : MonoBehaviour
     public float maxHeight;
     public float segmentDist;
     public Vector3[] vertexes;
-    public PlayerMovement player;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +52,7 @@ public class gen : MonoBehaviour
         }
         edgeCollider2D.SetPoints(list);
         // visualise
+
     }
     public void BackgroundStretch(){
         SpriteRenderer rendrer =  background.GetComponent<SpriteRenderer>();
