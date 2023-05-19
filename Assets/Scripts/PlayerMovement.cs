@@ -73,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
         Move();
         Brakes();
         Rotate();
-        Debug.Log(_maxSpeedDurationCounter);
 
         if(IsGrounded())
         {
