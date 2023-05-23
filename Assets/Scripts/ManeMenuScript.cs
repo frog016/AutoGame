@@ -5,14 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class ManeMenuScript : MonoBehaviour
 {
-    public void ClickExit()
+    public void ClickQuit()
     {
         Application.Quit();
+    }
+
+    public void ClickExit()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ClickStart()
     {
         SceneManager.LoadScene(6);
+    }
+
+    public void ClickGameMode()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void ClickAuto()
+    {
+        SceneManager.LoadScene(7);
     }
 
     public void ClickFunctions()
