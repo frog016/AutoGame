@@ -11,6 +11,7 @@ public class gen : MonoBehaviour
     public int segmentCount;
     public float maxHeight;
     public float segmentDist;
+
     public Vector3[] vertices;
 
     public GameObject[] road_blocks;
@@ -95,7 +96,6 @@ public class gen : MonoBehaviour
         }
         edgeCollider2D.SetPoints(list);
         // visualise
-
     }
     public void BackgroundStretch()
     {
