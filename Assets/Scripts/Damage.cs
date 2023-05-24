@@ -10,7 +10,7 @@ public class Damage : MonoBehaviour
 
         if (controller != null)
         {
-            controller.ChangeHealth(-10);
+            //controller.ChangeHealth(-10);
         }
     }
 }

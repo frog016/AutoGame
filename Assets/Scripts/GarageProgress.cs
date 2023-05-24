@@ -8,7 +8,7 @@ public class GarageProgress : MonoBehaviour
     public Text textToEdit;
     public Text textToEditOne;
     private int totalClick;
-    private int maxClick = 14;
+    private int maxClick = 5;
 
     public void ChangeText()
     {

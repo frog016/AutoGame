@@ -52,12 +52,12 @@ public class inf_gen : MonoBehaviour
     {
         if (l == 0)
         {
-            transform.position = new Vector3(transform.position.x + 1485, gen.vertexes[4969].y, 0);
+            transform.position = new Vector3(transform.position.x + 1485, vertexes[4969].y, 0);
             l += 1;
         }
         if (l % 2 == 0 && player.transform.position.x > (gen.transform.position.x + 500))
         {
-            transform.position = new Vector3(gen.transform.position.x + 1485, gen.vertexes[gen.vertexes.Length-1].y, 0);
+            transform.position = new Vector3(gen.transform.position.x + 1485, vertexes[vertexes.Length-1].y, 0);
             l += 1;
         }
         if (l % 2 == 1 && player.transform.position.x > (transform.position.x + 500))

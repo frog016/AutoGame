@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 1092462873113553278}
   - component: {fileID: 1092462873113553277}
   - component: {fileID: 1092462873113553276}
+  - component: {fileID: 4059729906774916311}
   - component: {fileID: 1092462873113553275}
   m_Layer: 0
   m_Name: s_car
@@ -407,6 +408,23 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
+--- !u!114 &4059729906774916311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092462873113553274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44823a6f9e4422040aa6e060c66e706e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
+  currentHealth: 0
+  fuel: 3
+  fuelconsumption: 1
+  ControlCar: []
 --- !u!114 &1092462873113553275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,9 +438,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
-  ControlCar:
-  - {fileID: 3677704995654525143, guid: 6f64b1012bd3aeb48949d3b4504b774b, type: 3}
-  - {fileID: 8336878177735714370, guid: 430d29d43bcf0e2499f7a065957ed8b9, type: 3}
+  currentHealth: 0
+  fuel: 3
+  fuelconsumption: 1
+  ControlCar: []
 --- !u!1 &1092462873452859427
 GameObject:
   m_ObjectHideFlags: 0

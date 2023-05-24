@@ -9,6 +9,8 @@ TagManager:
   - HpBar
   - FuelBar
   - CoinCounter
+  - car
+  - coins
   layers:
   - Default
   - TransparentFX

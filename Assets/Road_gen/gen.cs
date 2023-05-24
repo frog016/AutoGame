@@ -59,7 +59,7 @@ public class gen : MonoBehaviour
                 for (var j = 1; j < road.Length; j++)
                 {
                     float seg_len = road[j].x - road[j - 1].y;
-                    Debug.LogFormat(" Len {0}", seg_len);
+                    //Debug.LogFormat(" Len {0}", seg_len);
                     positions.Add(new Vector2(road_x + seg_len, road_y + road[j].y));
                     Instantiate(marker, new Vector2(road_x + seg_len, road_y + road[j].y), new Quaternion());
                     len += seg_len;
@@ -146,7 +146,7 @@ public class gen : MonoBehaviour
         {
             var temp = vertices[counter];
             Instantiate(obj,new Vector2(temp.x, temp.y + height), new Quaternion());
-            Debug.Log(vertices[counter]);
+            //Debug.Log(vertices[counter]);
             counter += dist;
         }
 

@@ -5,23 +5,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public static HealthBar instance { get; private set; }
-    public Image mask;
-    float originalSize;
-
-    void Awake()
-    { 
-    instance = this;
-    }
+    public Image healthBar;
+    public CarScript car;
 
     void Start()
     {
-        originalSize = mask.rectTransform.rect.width;
+        healthBar = GetComponent<Image>();
+        car = FindObjectOfType<CarScript>();
     }
 
-    public void SetValue(float value)
+    public void Update()
     {
-        mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
-        Debug.Log("Value" + value);
+        //healthBar.fillAmount = car.health / car.maxHealth;
     }
 }

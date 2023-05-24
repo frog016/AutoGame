@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AutoSelection.unity
     guid: 4011028a96b48654f8908a30daa42d63
+  - enabled: 1
+    path: Assets/Scenes/CityPlay.unity
+    guid: bd857d06c7263b24abf8458204810793
   m_configObjects: {}

@@ -9,6 +9,9 @@ public class CarScript : MonoBehaviour
     JointMotor2D frontWheel;
     JointMotor2D backWheel;
 
+    Image healthBar;
+    Image fuelBar;
+
     private float maxSpeed = -1000f;
     private float maxBackSpeed = 300f;
     private float acceleration = 400f;
@@ -21,36 +24,35 @@ public class CarScript : MonoBehaviour
     private float fuelUpgrade = 1;
     private float tireUpgrade = 1;
     private float chassisUpgrade = 1;
-    public int maxHealth = 150;
-    public int health { get { return currentHealth; } }
-    int currentHealth;
+    private float health = 1f;
 
-    //public float fuel = 3;
-    //public float fuelconsumption = 1f;
+    private float fuel = 1f;
+    private float fuelconsumption = 0.01f;
 
     public ClickScript[] ControlCar;
 
     void Start()
     {
-        currentHealth = 100;
+        healthBar = GameObject.FindGameObjectWithTag("HpBar").GetComponent<Image>();
+        fuelBar = GameObject.FindGameObjectWithTag("FuelBar").GetComponent<Image>();
         wheelJoints = gameObject.GetComponents<WheelJoint2D>();
         backWheel = wheelJoints[1].motor;
         frontWheel = wheelJoints[0].motor;
         if (PlayerPrefs.HasKey("maxSpeedUpgrade")) {
-            maxSpeedUpgrade = PlayerPrefs.GetFloat("maxSpeedUpgrade");
+            maxSpeedUpgrade += 0.1f * PlayerPrefs.GetInt("maxSpeedUpgrade");
         }
         if (PlayerPrefs.HasKey("accelerationUpgrade")) {
-            accelerationUpgrade = PlayerPrefs.GetFloat("accelerationUpgrade");
+            accelerationUpgrade += 0.04f * PlayerPrefs.GetInt("accelerationUpgrade");
         }
         if (PlayerPrefs.HasKey("tireUpgrade")) {
-            tireUpgrade = PlayerPrefs.GetFloat("tireUpgrade");
-            accelerationUpgrade += tireUpgrade % 1;
+            tireUpgrade += 0.02f * PlayerPrefs.GetInt("tireUpgrade");
+            accelerationUpgrade += tireUpgrade;
         }
         if (PlayerPrefs.HasKey("chassisUpgrade")) {
-            chassisUpgrade = PlayerPrefs.GetFloat("chassisUpgrade");
+            chassisUpgrade -= 0.04f * PlayerPrefs.GetInt("chassisUpgrade");
         }
         if (PlayerPrefs.HasKey("fuelUpgrade")) {
-            fuelUpgrade = PlayerPrefs.GetFloat("fuelUpgrade");
+            fuelUpgrade -= 0.07f * PlayerPrefs.GetInt("fuelUpgrade");
         }
     }
 
@@ -67,6 +69,7 @@ public class CarScript : MonoBehaviour
         if (ControlCar[0].clickedIs == true)
         {
             backWheel.motorSpeed = Mathf.Clamp(backWheel.motorSpeed - (acceleration * accelerationUpgrade - gravity * Mathf.PI * (angleCar / 180) * 100) * Time.deltaTime, maxSpeed * maxSpeedUpgrade, maxBackSpeed);
+            fuel -= fuelconsumption * fuelUpgrade * Time.deltaTime;
         }
         else if ((backWheel.motorSpeed < 0) || (ControlCar[0].clickedIs == false && backWheel.motorSpeed == 0 && angleCar < 0))
         {
@@ -88,6 +91,7 @@ public class CarScript : MonoBehaviour
         if (ControlCar[1].clickedIs == true && backWheel.motorSpeed >= 0)
         {
             backWheel.motorSpeed = Mathf.Clamp(backWheel.motorSpeed + brakeForce * 0.1f * Time.deltaTime, 0, maxBackSpeed);
+            fuel -= fuelconsumption * fuelUpgrade * Time.deltaTime;
         }
         else if (ControlCar[1].clickedIs == true && backWheel.motorSpeed < 0)
         {
@@ -97,14 +101,21 @@ public class CarScript : MonoBehaviour
         wheelJoints[1].motor = backWheel;
         wheelJoints[0].motor = frontWheel;
 
-        //fuel -= fuelconsumption * Mathf.Abs(movement) * Time.fixedDeltaTime;
+        healthBar.fillAmount = health;
+        fuelBar.fillAmount = fuel;
     }
 
-    public void ChangeHealth(int amount)
-    {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        HealthBar.instance.SetValue(currentHealth / (float)maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+    public void collectFuel() {
+        if (fuel <= 0.7f) {
+            fuel += 0.3f;
+        } else {
+            fuel = 1f;
+        }
     }
 
+    public void policeStop() {
+        if (backWheel.motorSpeed <= -800f) {
+            health -= 0.2f;
+        }
+    }
 }   

@@ -8,24 +8,27 @@ public class ButtonUpgrade : MonoBehaviour
 
     public void addUpgrade() {
         if (!PlayerPrefs.HasKey(upgrade)) {
-            PlayerPrefs.SetFloat(upgrade, 1f);
+            PlayerPrefs.SetInt(upgrade, 1);
         } 
-        float currentUpgrade = PlayerPrefs.GetFloat(upgrade);
+        int currentUpgrade = PlayerPrefs.GetInt(upgrade);
+        if (currentUpgrade == 5) {
+            return;
+        }
         switch (upgrade) {
             case "maxSpeedUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade + 0.1f);
+                PlayerPrefs.SetInt(upgrade, currentUpgrade + 1);
                 break;
             case "accelerationUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade + 0.04f);
+                PlayerPrefs.SetInt(upgrade, currentUpgrade + 1);
                 break;
             case "tireUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade + 0.02f);
+                PlayerPrefs.SetInt(upgrade, currentUpgrade + 1);
                 break;
             case "chassisUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade - 0.04f);
+                PlayerPrefs.SetInt(upgrade, currentUpgrade + 1);
                 break;  
             case "fuelUpgrade":
-                PlayerPrefs.SetFloat(upgrade, currentUpgrade - 0.07f);
+                PlayerPrefs.SetInt(upgrade, currentUpgrade + 1);
                 break;          
         }
     }

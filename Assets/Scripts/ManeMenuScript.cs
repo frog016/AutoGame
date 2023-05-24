@@ -17,7 +17,7 @@ public class ManeMenuScript : MonoBehaviour
 
     public void ClickStart()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(8);
     }
 
     public void ClickGameMode()

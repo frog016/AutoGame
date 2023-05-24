@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 136552896}
   - component: {fileID: 136552895}
   - component: {fileID: 136552898}
+  - component: {fileID: 136552899}
   m_Layer: 5
   m_Name: buy
   m_TagString: Untagged
@@ -589,6 +590,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 136552899}
+        m_TargetAssemblyTypeName: ButtonUpgrade, Assembly-CSharp
+        m_MethodName: addUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &136552896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,6 +654,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEdit: {fileID: 850810648}
   textToEditOne: {fileID: 1372875154}
+--- !u!114 &136552899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136552893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b8601099641844daa1588b03008230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: chassisUpgrade
 --- !u!1 &151512324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /0
+  m_text: /5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
   m_sharedMaterial: {fileID: -5043414059745094869, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
@@ -2116,6 +2142,7 @@ GameObject:
   - component: {fileID: 476537611}
   - component: {fileID: 476537610}
   - component: {fileID: 476537613}
+  - component: {fileID: 476537614}
   m_Layer: 5
   m_Name: buy
   m_TagString: Untagged
@@ -2200,6 +2227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 476537614}
+        m_TargetAssemblyTypeName: ButtonUpgrade, Assembly-CSharp
+        m_MethodName: addUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &476537611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,6 +2291,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEdit: {fileID: 1033080090}
   textToEditOne: {fileID: 833255781}
+--- !u!114 &476537614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476537608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b8601099641844daa1588b03008230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: maxSpeedUpgrade
 --- !u!1 &526295108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,7 +2362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /0
+  m_text: /5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
   m_sharedMaterial: {fileID: -5043414059745094869, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
@@ -2458,7 +2510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /0
+  m_Text: /5
 --- !u!222 &537867160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3235,7 +3287,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /0
+  m_Text: /5
 --- !u!222 &645437949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3415,6 +3467,7 @@ GameObject:
   - component: {fileID: 682795571}
   - component: {fileID: 682795570}
   - component: {fileID: 682795573}
+  - component: {fileID: 682795574}
   m_Layer: 5
   m_Name: buy
   m_TagString: Untagged
@@ -3499,6 +3552,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 682795574}
+        m_TargetAssemblyTypeName: ButtonUpgrade, Assembly-CSharp
+        m_MethodName: addUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &682795571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3551,6 +3616,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEdit: {fileID: 1275363366}
   textToEditOne: {fileID: 1473066897}
+--- !u!114 &682795574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682795568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b8601099641844daa1588b03008230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: fuelUpgrade
 --- !u!1 &697199103
 GameObject:
   m_ObjectHideFlags: 0
@@ -5707,7 +5785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /0
+  m_text: /5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
   m_sharedMaterial: {fileID: -5043414059745094869, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
@@ -6685,7 +6763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /0
+  m_Text: /5
 --- !u!222 &1408973552
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6982,6 +7060,7 @@ GameObject:
   - component: {fileID: 1513531310}
   - component: {fileID: 1513531309}
   - component: {fileID: 1513531312}
+  - component: {fileID: 1513531313}
   m_Layer: 5
   m_Name: buy
   m_TagString: Untagged
@@ -7066,6 +7145,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1513531313}
+        m_TargetAssemblyTypeName: ButtonUpgrade, Assembly-CSharp
+        m_MethodName: addUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1513531310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7118,6 +7209,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEdit: {fileID: 793215863}
   textToEditOne: {fileID: 1045645302}
+--- !u!114 &1513531313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513531307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b8601099641844daa1588b03008230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: tireUpgrade
 --- !u!1 &1515973081
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,7 +7446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /0
+  m_Text: /5
 --- !u!222 &1563833838
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7988,7 +8092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a772494797503af41828113447de39cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8153,7 +8257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /0
+  m_Text: /5
 --- !u!222 &1811700049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8175,6 +8279,7 @@ GameObject:
   - component: {fileID: 1817301176}
   - component: {fileID: 1817301175}
   - component: {fileID: 1817301178}
+  - component: {fileID: 1817301179}
   m_Layer: 5
   m_Name: buy
   m_TagString: Untagged
@@ -8259,6 +8364,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1817301179}
+        m_TargetAssemblyTypeName: ButtonUpgrade, Assembly-CSharp
+        m_MethodName: addUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1817301176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8311,6 +8428,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToEdit: {fileID: 833540717}
   textToEditOne: {fileID: 269948810}
+--- !u!114 &1817301179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817301173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b8601099641844daa1588b03008230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: accelerationUpgrade
 --- !u!1 &1859647917
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,7 +8634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /0
+  m_text: /5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
   m_sharedMaterial: {fileID: -5043414059745094869, guid: d7fe35a69a94f61428de18a1d3f9db5b, type: 2}
@@ -8810,6 +8940,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1993453846
 GameObject:
   m_ObjectHideFlags: 0
