@@ -11,6 +11,8 @@ TagManager:
   - CoinCounter
   - car
   - coins
+  - pauseButton
+  - deathName
   layers:
   - Default
   - TransparentFX

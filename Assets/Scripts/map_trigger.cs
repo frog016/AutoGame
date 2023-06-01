@@ -29,8 +29,10 @@ public class map_trigger : MonoBehaviour
                 Destroy(gameObject);
                 break;
                 case "police":
-                Debug.Log("police");
                 car.policeStop();
+                break;
+                case "hole":
+                car.hole();
                 break;
             }
         }
