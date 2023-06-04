@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5243fa6d8ab6440a3ea5d087db37cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lowFuelScene: 11
+  _brokenCarScene: 13
   _plots:
   - _firstScene: 9
     _endScene: 0

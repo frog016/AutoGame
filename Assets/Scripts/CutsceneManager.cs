@@ -34,6 +34,8 @@ public class CutsceneManager : MonoBehaviour
     private PlotInfo _chosenPlot;
     public PlotInfo ChosenPlot => _chosenPlot;
 
+    [SerializeField] private int _lowFuelScene;
+    [SerializeField] private int _brokenCarScene;
     [SerializeField] private List<PlotInfo> _plots;
 
 
@@ -64,5 +66,14 @@ public class CutsceneManager : MonoBehaviour
         SceneManager.LoadScene(_chosenGameScene);
     }
 
+    public void ShowBrokenScene()
+    {
+        SceneManager.LoadScene(_lowFuelScene);
+    }
+
+    public void ShowFuelScene()
+    {
+        SceneManager.LoadScene(_brokenCarScene);
+    }
 
 }

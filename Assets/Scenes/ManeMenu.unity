@@ -4571,14 +4571,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 485994462771160463, guid: 3b122f0d1463eec4b90ec2d0529f0a61, type: 3}
-      propertyPath: _plots.Array.data[1]._firstScene
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 485994462771160463, guid: 3b122f0d1463eec4b90ec2d0529f0a61, type: 3}
-      propertyPath: _plots.Array.data[2]._firstScene
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 6611484465235738851, guid: 3b122f0d1463eec4b90ec2d0529f0a61, type: 3}
       propertyPath: m_Name
       value: CutsceneManager

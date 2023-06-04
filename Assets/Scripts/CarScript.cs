@@ -117,11 +117,9 @@ public class CarScript : MonoBehaviour
         fuelBar.fillAmount = fuel;
 
         if (health <= 0) {
-            deathMenu.SetActive(true);
-            Time.timeScale = 0f;
+            CutsceneManager.Instance.ShowBrokenScene();
         } else if (fuel <= 0) {
-            deathMenu.SetActive(true);
-            Time.timeScale = 0f;
+            CutsceneManager.Instance.ShowFuelScene();
         }
     }
 
