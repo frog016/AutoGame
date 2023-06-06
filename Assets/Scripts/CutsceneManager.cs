@@ -68,12 +68,12 @@ public class CutsceneManager : MonoBehaviour
 
     public void ShowBrokenScene()
     {
-        SceneManager.LoadScene(_lowFuelScene);
+        SceneManager.LoadScene(_brokenCarScene);
     }
 
     public void ShowFuelScene()
     {
-        SceneManager.LoadScene(_brokenCarScene);
+        SceneManager.LoadScene(_lowFuelScene);
     }
 
 }
