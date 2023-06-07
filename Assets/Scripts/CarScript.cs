@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CarScript : MonoBehaviour
 {
@@ -29,12 +30,23 @@ public class CarScript : MonoBehaviour
     private float fuel = 1f;
     private float fuelconsumption = 0.01f;
 
+    public GameObject deathMenu;
+    public Text deathName;
+    public GameObject contButton;
+
     public ClickScript[] ControlCar;
+
+    void Awake() {
+        Time.timeScale = 1f;
+    }
 
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("HpBar").GetComponent<Image>();
         fuelBar = GameObject.FindGameObjectWithTag("FuelBar").GetComponent<Image>();
+        //deathMenu = GameObject.FindGameObjectWithTag("DeathMenu");
+        //deathName = GameObject.FindGameObjectWithTag("deathName").GetComponent<Text>();
+        //contButton = GameObject.FindGameObjectWithTag("pauseButton");
         wheelJoints = gameObject.GetComponents<WheelJoint2D>();
         backWheel = wheelJoints[1].motor;
         frontWheel = wheelJoints[0].motor;
@@ -103,6 +115,12 @@ public class CarScript : MonoBehaviour
 
         healthBar.fillAmount = health;
         fuelBar.fillAmount = fuel;
+
+        if (health <= 0) {
+            CutsceneManager.Instance.ShowBrokenScene();
+        } else if (fuel <= 0) {
+            CutsceneManager.Instance.ShowFuelScene();
+        }
     }
 
     public void collectFuel() {
@@ -115,6 +133,12 @@ public class CarScript : MonoBehaviour
 
     public void policeStop() {
         if (backWheel.motorSpeed <= -800f) {
+            health -= 0.2f;
+        }
+    }
+
+    public void hole() {
+        if (backWheel.motorSpeed <= -350f) {
             health -= 0.2f;
         }
     }
