@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using System.Linq;
 
 public class gen : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class gen : MonoBehaviour
 
     public float height;
 
+    public GameObject finish;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,8 @@ public class gen : MonoBehaviour
         Vector2 point = GetComponent<Transform>().position;
         float len = segmentDist;
         List<Vector2> positions = new List<Vector2>();
+        positions.Add(point);
+        point = new Vector2(point.x + segmentDist*5, point.y);
         positions.Add(point);
         for (var i = 1; i < segmentCount; i++)
         {
@@ -74,6 +79,9 @@ public class gen : MonoBehaviour
                 positions.Add(new_point);
             }
         }
+        var temp_last = positions.LastOrDefault();
+        positions.Add(new Vector2(temp_last.x + segmentDist*5, temp_last.y));
+        Instantiate(finish, temp_last, new Quaternion());
         return positions.ToArray();
     }
 
