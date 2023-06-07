@@ -48,8 +48,8 @@ MonoBehaviour:
   _brokenCarScene: 13
   _plots:
   - _firstScene: 9
-    _endScene: 16
-  - _firstScene: 10
     _endScene: 15
+  - _firstScene: 10
+    _endScene: 16
   - _firstScene: 12
     _endScene: 14

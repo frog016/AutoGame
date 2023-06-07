@@ -47,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes Scenes/BreakDownCutscene.unity
     guid: 817f5280dc9638c47bee8d6c4c74bbc2
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes Scenes/GrandmaEndScene.unity
+    guid: fab8d73ac93708141941f5662ba7f0fe
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes Scenes/CinemaEndScene.unity
+    guid: 5789b7ee2fcceaa4f8fe6f733d70394f
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes Scenes/FootballEndScene.unity
+    guid: fc09dd3b2c241e24698c500811617686
   m_configObjects: {}

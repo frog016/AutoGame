@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -64,6 +63,16 @@ public class CutsceneManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(_chosenGameScene);
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene(_chosenPlot.EndScene);
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ShowBrokenScene()

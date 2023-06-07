@@ -25,10 +25,9 @@ public class CarScript : MonoBehaviour
     private float fuelUpgrade = 1;
     private float tireUpgrade = 1;
     private float chassisUpgrade = 1;
-    private float health = 1f;
-
-    private float fuel = 1f;
-    private float fuelconsumption = 0.01f;
+    [SerializeField] private float health = 1f;
+    [SerializeField] private float fuel = 1f;
+    [SerializeField] private float fuelconsumption = 0.01f;
 
     public GameObject deathMenu;
     public Text deathName;
