@@ -49,5 +49,10 @@ public class ManeMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+    
+    public void CityPlay()
+    {
+        SceneManager.LoadScene(8);
+    }
 }
 
