@@ -145,4 +145,4 @@ public class CarScript : MonoBehaviour
             health -= 0.2f;
         }
     }
-}   
+}
