@@ -1,17 +1,21 @@
-﻿using UnityEngine;
+﻿using InputSystem;
+using UnityEngine;
 
 namespace Driving
 {
     [RequireComponent(typeof(Car))]
     public class CarMovementController : MonoBehaviour
     {
-        private Car _car;
+        [SerializeField] private MoveButton[] _buttons;
 
+        private Car _car;
+        private IInputSystem _inputSystem;
         private const float VelocityEpsilon = 5e-2f;
 
         private void Awake()
         {
             _car = GetComponent<Car>();
+            _inputSystem = new ButtonsInputSystem(_buttons[0], _buttons[1]);
         }
 
         private void FixedUpdate()
@@ -21,7 +25,7 @@ namespace Driving
 
         private void HandleMoveDirection()
         {
-            var direction = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
+            var direction = _inputSystem.GetMoveDirection();
             var consumedFuel = _car.FuelConsumption * Time.fixedDeltaTime;
 
             var velocity = _car.MainWheel.Velocity;
