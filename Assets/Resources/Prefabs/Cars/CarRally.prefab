@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2546435932830321868}
   - component: {fileID: 2546435932830321871}
   m_Layer: 0
-  m_Name: car-rallycar
+  m_Name: CarRally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

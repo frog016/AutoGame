@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1930793024875190947}
   - component: {fileID: 6561056349922125925}
   m_Layer: 0
-  m_Name: Police_test
+  m_Name: PoliceTest
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
