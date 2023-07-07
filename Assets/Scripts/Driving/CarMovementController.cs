@@ -25,7 +25,6 @@ namespace Driving
             var consumedFuel = _car.FuelConsumption * Time.fixedDeltaTime;
 
             var velocity = _car.MainWheel.Velocity;
-            Debug.Log($"Direction = {direction}, Velocity = {velocity}.");
             switch (direction)
             {
                 case -1 when velocity.x > 0:
