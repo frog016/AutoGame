@@ -34,16 +34,20 @@ namespace Driving
                 case -1 when velocity.x > 0:
                 case 1 when velocity.x < 0:
                     _car.MainWheel.Brake();
+                    _car.SecondWheel.Brake();
                     break;
                 case -1 or 1 when _car.FuelTank.IsFuelEnough(consumedFuel):
                     _car.MainWheel.Accelerate(direction);
+                    _car.SecondWheel.Accelerate(direction);
                     _car.FuelTank.Consume(consumedFuel);
                     break;
                 case 0 when velocity.magnitude < VelocityEpsilon:
                     _car.MainWheel.StopBraking();
+                    _car.SecondWheel.StopBraking();
                     break;
                 case 0 when velocity.x > VelocityEpsilon:
                     _car.MainWheel.SlowDown();
+                    _car.SecondWheel.SlowDown();
                     break;
             }
         }

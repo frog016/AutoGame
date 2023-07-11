@@ -14,14 +14,17 @@ namespace Driving
         [SerializeField] private int _maxHealth;
         [SerializeField] private float _wheelRadius;
         [SerializeField] private WheelJoint2D _mainWheelJoint;
+        [SerializeField] private WheelJoint2D _secondWheelJoint;
 
         public FuelTank FuelTank { get; private set; }
         public Wheel MainWheel { get; private set; }
+        public Wheel SecondWheel { get; private set; }
         public IDamageable Health { get; private set; }
 
         private void Awake()
         {
             MainWheel = new Wheel(_maxSpeed, _acceleration, _passiveDeceleration, _wheelRadius, _mainWheelJoint);
+            SecondWheel = new Wheel(_maxSpeed, _acceleration, _passiveDeceleration, _wheelRadius, _secondWheelJoint);
             FuelTank = new FuelTank(_fuelCapacity);
             Health = new DamageableObject(_maxHealth);
         }

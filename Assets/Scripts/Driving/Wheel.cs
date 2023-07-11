@@ -71,7 +71,14 @@ namespace Driving
 
         private float ConvertLinearToAngle(float value)
         {
-            return value * 2 * _radius * Mathf.PI * Mathf.Rad2Deg;
+            var angularSpeed = value / _radius; 
+            return angularSpeed * Mathf.Rad2Deg;
+        }
+
+        private float ConvertAngleToLinear(float value)
+        {
+            var linearSpeed = value * _radius;
+            return linearSpeed * Mathf.Deg2Rad;
         }
     }
 }
