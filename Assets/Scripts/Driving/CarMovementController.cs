@@ -10,6 +10,7 @@ namespace Driving
 
         private Car _car;
         private IInputSystem _inputSystem;
+
         private const float VelocityEpsilon = 5e-2f;
 
         private void Awake()
@@ -45,7 +46,7 @@ namespace Driving
                     _car.MainWheel.StopBraking();
                     _car.SecondWheel.StopBraking();
                     break;
-                case 0 when velocity.x > VelocityEpsilon:
+                case 0 when Mathf.Abs(velocity.x) > VelocityEpsilon:
                     _car.MainWheel.SlowDown();
                     _car.SecondWheel.SlowDown();
                     break;

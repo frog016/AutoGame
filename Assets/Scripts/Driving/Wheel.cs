@@ -13,6 +13,8 @@ namespace Driving
         private readonly float _radius;
         private readonly WheelJoint2D _wheelJoint;
 
+        private float RotationAngle => Mathf.Clamp(_wheelJoint.transform.rotation.z, -90, 90);
+
         public Wheel(float maxSpeed, float acceleration, float passiveDeceleration, float radius, WheelJoint2D wheelJoint)
         {
             _maxSpeed = maxSpeed;
@@ -30,7 +32,7 @@ namespace Driving
                 throw new ArgumentOutOfRangeException($"Direction must be 1 or -1.");
 
             var motor = _wheelJoint.motor;
-            var acceleration = ConvertLinearToAngle(_acceleration);
+            var acceleration = ConvertLinearToAngle(_acceleration) * Mathf.Cos(RotationAngle);
             var speed = Mathf.Abs(motor.motorSpeed);
             var reversDirection = -direction;
 
@@ -42,7 +44,9 @@ namespace Driving
         public void SlowDown()
         {
             var motor = _wheelJoint.motor;
-            var deceleration = ConvertLinearToAngle(_passiveDeceleration);
+
+            var angleCoefficient = 1 + Mathf.Abs(Mathf.Sin(RotationAngle));
+            var deceleration = ConvertLinearToAngle(_passiveDeceleration) * angleCoefficient;
             var speed = Mathf.Abs(motor.motorSpeed);
             var speedSign = Mathf.Sign(motor.motorSpeed);
 
@@ -71,7 +75,7 @@ namespace Driving
 
         private float ConvertLinearToAngle(float value)
         {
-            var angularSpeed = value / _radius; 
+            var angularSpeed = value / _radius;
             return angularSpeed * Mathf.Rad2Deg;
         }
 
