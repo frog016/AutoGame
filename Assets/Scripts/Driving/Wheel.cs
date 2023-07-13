@@ -6,7 +6,8 @@ namespace Driving
     public class Wheel
     {
         public Vector2 Velocity => _wheelJoint.attachedRigidbody.velocity;
-
+        public Vector2 VelocityInKmph => Velocity * 3.6f;
+        
         private readonly float _maxSpeed;
         private readonly float _acceleration;
         private readonly float _passiveDeceleration;

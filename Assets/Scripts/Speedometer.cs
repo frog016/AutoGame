@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Speedometer : MonoBehaviour
 {
-    public Rigidbody2D target;
+    public Driving.Car car;
 
     public float maxSpeed = 0.0f;
 
@@ -20,7 +20,7 @@ public class Speedometer : MonoBehaviour
     private float speed = 0.0f;
     private void Update()
     {
-        speed = target.velocity.magnitude * 3.6f;
+        speed = car.MainWheel.VelocityInKmph.magnitude;
 
         if (speedLabel != null)
             speedLabel.text = ((int)speed) + " km/h";
