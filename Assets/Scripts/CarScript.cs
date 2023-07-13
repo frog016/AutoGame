@@ -126,6 +126,8 @@ public class CarScript : MonoBehaviour
         }
     }
 
+    public void ChangeHealth(float amount) => health += amount;
+    
     public void collectFuel() {
         if (fuel <= 0.7f) {
             fuel += 0.3f;
