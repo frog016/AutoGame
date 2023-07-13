@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 9167127274285938915}
   - component: {fileID: 1930793024875190947}
   - component: {fileID: 6561056349922125925}
+  - component: {fileID: 3663929237166185426}
   m_Layer: 0
   m_Name: PoliceTest
   m_TagString: Untagged
@@ -174,3 +175,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &3663929237166185426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989744808748352730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455e797129893ac408d41bf644798178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
