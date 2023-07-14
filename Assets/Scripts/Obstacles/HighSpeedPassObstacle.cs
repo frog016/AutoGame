@@ -7,18 +7,20 @@ namespace Obstacles
 {
     public class HighSpeedPassObstacle : MonoBehaviour
     {
+        [SerializeField] private int damage;
+        [SerializeField] private float speedLimit;
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("car"))
             {
                 var car = other.GetComponent<Driving.Car>();
-                //var carSpeed = car.MainWheel.Velocity.magnitude * 3.6;
-                var carSpeed = car.MainWheel.Velocity.magnitude;
-                if (carSpeed > 30)
+                var carSpeed = car.MainWheel.VelocityInKmph.magnitude;
+                
+                if (carSpeed > speedLimit)
                 {
-                    car.Health.ApplyDamage(10);
+                    car.Health.ApplyDamage(damage);
                     Debug.Log("Lost health to GRAVEL");
-                    Destroy(gameObject);
                 }
             }
         }

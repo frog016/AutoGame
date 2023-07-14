@@ -54,6 +54,7 @@ public class RoadGenerator : MonoBehaviour
             }
             if (i % obstacleFrequency == 0)
                 Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
+                //Instantiate(obstacles[3], lastPos, Quaternion.identity, transform);
         }
         
         spriteShapeController.spline.InsertPointAt(levelLength, new Vector3(lastPos.x, transform.position.y - bottom));
