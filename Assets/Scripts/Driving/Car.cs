@@ -1,6 +1,7 @@
 ﻿using System;
 using Health;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Driving
 {
@@ -28,6 +29,20 @@ namespace Driving
             SecondWheel = new Wheel(_maxSpeed, _acceleration, _passiveDeceleration, _wheelRadius, _secondWheelJoint);
             FuelTank = new FuelTank(_fuelCapacity);
             Health = new DamageableObject(_maxHealth);
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                transform.position += new Vector3(0, 3);
+                transform.rotation = Quaternion.identity;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 }

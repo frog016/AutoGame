@@ -11,8 +11,9 @@ namespace Obstacles
         {
             if (other.gameObject.CompareTag("car"))
             {
-                //other.gameObject.GetComponent<Driving.Car>().Health.ApplyDamage(10);
-                other.gameObject.GetComponent<CarScript>().ChangeHealth(-0.2f);
+                other.gameObject.GetComponent<Driving.Car>().Health.ApplyDamage(10);
+                Debug.Log("Lost health to BRICK");
+                Destroy(gameObject);
             }
         }
     } 

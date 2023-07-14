@@ -4,12 +4,15 @@ namespace Obstacles
 {
     public class BigFallingObstacle : MonoBehaviour
     {
+        [SerializeField] private int damage;
+        
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.CompareTag("car"))
             {
-                //other.gameObject.GetComponent<Driving.Car>().Health.ApplyDamage(50);
-                other.gameObject.GetComponent<CarScript>().ChangeHealth(-0.6f);
+                other.gameObject.GetComponent<Driving.Car>().Health.ApplyDamage(damage);
+                Debug.Log("Lost health to BARREL");
+                Destroy(gameObject);
             }
         }
     }

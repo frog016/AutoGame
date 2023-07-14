@@ -13,9 +13,12 @@ namespace Obstacles
             {
                 var car = other.GetComponent<Driving.Car>();
                 var carSpeed = car.MainWheel.Velocity.magnitude * 3.6;
-                
+
                 if (carSpeed > 20)
+                {
                     PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") - (1 + (int)carSpeed - 20));
+                    Debug.Log("Lost money to POLICEPOST");
+                }
             }
         }
     } 

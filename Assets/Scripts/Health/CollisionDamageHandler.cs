@@ -28,7 +28,7 @@ namespace Health
             var collisionForce = GetCollisionForce(collision);
             var damage = Mathf.FloorToInt(Vector2.Scale(collisionForce, _damageCoefficient).magnitude);
             _carBody.ApplyDamage(damage);
-            Debug.Log(damage);
+            Debug.Log("Col damage: " + damage);
             
             StartCoroutine(Restart());
         }

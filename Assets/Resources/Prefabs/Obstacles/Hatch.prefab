@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2511830202663413199}
   - component: {fileID: 3107177136838138656}
-  - component: {fileID: 5464647884651198244}
   - component: {fileID: 1131216795675493283}
+  - component: {fileID: 7745182562976328877}
   m_Layer: 0
   m_Name: Hatch
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8827221569614171809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.24, y: -4.09, z: 0}
-  m_LocalScale: {x: 1, y: 0.1342, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 09103340eca130946bfe912af6f2bea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9364bfd2adb82642b80ca73ce1a2aa6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5464647884651198244
-BoxCollider2D:
+--- !u!114 &1131216795675493283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8827221569614171809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca24113ea6adc84e93fa6498f30e0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &7745182562976328877
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -103,24 +115,17 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.29, y: 5.29}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 5.29, y: 5.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.29, y: 5.29}
-  m_EdgeRadius: 0
---- !u!114 &1131216795675493283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827221569614171809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aca24113ea6adc84e93fa6498f30e0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+    m_Paths:
+    - - {x: -6.39, y: 0.34}
+      - {x: -6.96, y: -0.39}
+      - {x: -6.96, y: -0.84}
+      - {x: 7.19, y: -0.84}
+      - {x: 7.19, y: -0.44}
+      - {x: 6.58, y: 0.34}

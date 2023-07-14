@@ -15,7 +15,11 @@ namespace Obstacles
                 //var carSpeed = car.MainWheel.Velocity.magnitude * 3.6;
                 var carSpeed = car.MainWheel.Velocity.magnitude;
                 if (carSpeed > 30)
+                {
                     car.Health.ApplyDamage(10);
+                    Debug.Log("Lost health to GRAVEL");
+                    Destroy(gameObject);
+                }
             }
         }
     }  

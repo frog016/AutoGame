@@ -9,6 +9,8 @@ namespace Obstacles
             if (other.CompareTag("car"))
             {
                 other.GetComponent<Driving.Car>().Health.ApplyDamage(30);
+                Debug.Log("Lost health to HATCH");
+                Destroy(gameObject);
             }
         }
     }
