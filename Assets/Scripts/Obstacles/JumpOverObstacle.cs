@@ -12,7 +12,7 @@ namespace Obstacles
             {
                 other.GetComponent<Driving.Car>().Health.ApplyDamage(damage);
                 Debug.Log("Lost health to HATCH");
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }

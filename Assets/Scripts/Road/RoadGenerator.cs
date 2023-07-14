@@ -45,16 +45,21 @@ public class RoadGenerator : MonoBehaviour
             lastPos = transform.position +
                       new Vector3(i * xMultiplier, Mathf.PerlinNoise(0, i * noiseStep) * yMultiplier);
             spriteShapeController.spline.InsertPointAt(i, lastPos);
-
+            
+            if (i % obstacleFrequency == 0)
+            {
+                Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
+                //spriteShapeController.spline.InsertPointAt(i, lastPos + new Vector3(-1, 0));
+                //spriteShapeController.spline.InsertPointAt(i, lastPos + new Vector3(1, 0));
+            }
+            
             if (i != 0 && i != levelLength - 1)
             {
                 spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
                 spriteShapeController.spline.SetLeftTangent(i, Vector3.left * xMultiplier * curveSmoothness);
                 spriteShapeController.spline.SetRightTangent(i, Vector3.right * xMultiplier * curveSmoothness);
             }
-            if (i % obstacleFrequency == 0)
-                Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
-                //Instantiate(obstacles[3], lastPos, Quaternion.identity, transform);
+            //Instantiate(obstacles[3], lastPos, Quaternion.identity, transform);
         }
         
         spriteShapeController.spline.InsertPointAt(levelLength, new Vector3(lastPos.x, transform.position.y - bottom));
