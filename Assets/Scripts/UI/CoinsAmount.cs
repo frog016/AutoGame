@@ -10,6 +10,6 @@ public class CoinsAmount : MonoBehaviour
 
     private void Update()
     {
-        coinsText.text = PlayerPrefs.GetInt("coins").ToString();
+        coinsText.text = PlayerPrefs.GetInt("CoinsAmount").ToString();
     }
 }
