@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MapObjects;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace Road
         [SerializeField] private float noiseStep = 0.5f;
         [SerializeField] private float bottom = 10f;
 
-        [SerializeField] private List<GameObject> collectables;
+        [SerializeField] private List<ObjectSpawnChance> collectables;
         
         [SerializeField] private int obstacleFrequency;
         [SerializeField] private List<GameObject> obstacles;
@@ -38,30 +39,22 @@ namespace Road
         private void GenerateLevel(bool areObstSpawning)
         {
             spriteShapeController.spline.Clear();
-            while (transform.childCount > 0) 
-            {
-                Destroy(transform.GetChild(0).gameObject);
-            }
-        
+            
             for (var i = 0; i < levelLength; i++)
             {   
                 lastPos = transform.position +
                           new Vector3(i * xMultiplier, Mathf.PerlinNoise(0, i * noiseStep) * yMultiplier);
                 if (spriteShapeController.spline.GetPointCount() <= i)
                     spriteShapeController.spline.InsertPointAt(i, lastPos);
-
-                if (Random.Range(0.0f, 1.0f) < 0.5f)
-                {
-                    var collectable = Instantiate(collectables[Random.Range(0, collectables.Count)], lastPos,
-                        Quaternion.identity, transform);
-                    collectable.transform.localPosition = lastPos + collectable.GetComponent<MapObject>().GetSpawnOffset();
-                }
+                
+                if (i == 0 || i == levelLength - 1)
+                    continue;
                 
                 if (areObstSpawning && i % obstacleFrequency == 0)
                 {
                     // 0 - barrel, 1 - brick, 2 - gravel, 3 - hatch, 4 - policepost
-                    var obstacle = Instantiate(obstacles[0], lastPos, Quaternion.identity, transform); 
-                    //var obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
+                    //var obstacle = Instantiate(obstacles[0], lastPos, Quaternion.identity, transform); 
+                    var obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
                     const float horizontalDifference = 3.0f;
                     obstacle.transform.localPosition = lastPos + new Vector3(horizontalDifference, 0.0f) + obstacle.GetComponent<MapObject>().GetSpawnOffset();
                     spriteShapeController.spline.InsertPointAt(i + 1, lastPos + new Vector3(horizontalDifference, 0.0f));
@@ -80,8 +73,26 @@ namespace Road
                 spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
                 spriteShapeController.spline.SetLeftTangent(i, Vector3.left * xMultiplier * curveSmoothness);
                 spriteShapeController.spline.SetRightTangent(i, Vector3.right * xMultiplier * curveSmoothness);
+                
+                foreach (var collChance in collectables)
+                {
+                    if (Random.Range(0.0f, 1.0f) < collChance.chance / 100)
+                    {
+                        var collectable = Instantiate(collChance.mapObject, lastPos, Quaternion.identity, transform);
+                        collectable.transform.localPosition = spriteShapeController.spline.GetPosition(i) + collectable.GetComponent<MapObject>().GetSpawnOffset();
+
+                        break;
+                    }
+                }
             }
         }
+    }
+
+    [Serializable]
+    public class ObjectSpawnChance
+    {
+        public GameObject mapObject;
+        public float chance;
     }
 }
 
