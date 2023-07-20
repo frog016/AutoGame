@@ -8,5 +8,6 @@ namespace Health
         int MaxHealth { get; }
         event Action<int> Changed;
         void ApplyDamage(int amount);
+        void ApplyHeal(int amount);
     }
 }

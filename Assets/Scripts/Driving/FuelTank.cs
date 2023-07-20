@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Driving
 {
@@ -29,6 +30,8 @@ namespace Driving
         {
             AssertPositive(amount);
 
+            FuelAmount = Mathf.Min(FuelCapacity, FuelAmount + amount);
+            Changed?.Invoke(FuelAmount);
         }
 
         public bool IsFuelEnough(float amount)

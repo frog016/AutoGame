@@ -24,5 +24,15 @@ namespace Health
             Health = health;
             Changed?.Invoke(Health);
         }
+
+        public void ApplyHeal(int amount)
+        {
+            if (amount < 0)
+                throw new ArgumentOutOfRangeException();
+
+            var health = Mathf.Min(MaxHealth, Health + amount);
+            Health = health;
+            Changed?.Invoke(Health);
+        }
     }
 }
