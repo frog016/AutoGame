@@ -1,15 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinsAmount : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private Text coinsText;
-
-    private void Update()
+    public class CoinsAmount : MonoBehaviour
     {
-        coinsText.text = PlayerPrefs.GetInt("CoinsAmount").ToString();
+        [SerializeField] private Text coinsText;
+
+        private void Update()
+        {
+            coinsText.text = PlayerPrefs.GetInt("CoinsAmount").ToString();
+        }
     }
 }

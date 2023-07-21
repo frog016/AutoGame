@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace MapObjects
+namespace MapObjects.Collectables
 {
     public class GasFuelObject : MapObject
     {
