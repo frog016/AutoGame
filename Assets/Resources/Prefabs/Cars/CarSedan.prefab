@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae9cf3ad517ebf448587cc6885617c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <FuelConsumption>k__BackingField: 0
+  <FuelConsumption>k__BackingField: 1
   _acceleration: 5
   _passiveDeceleration: 5
   _maxSpeed: 50

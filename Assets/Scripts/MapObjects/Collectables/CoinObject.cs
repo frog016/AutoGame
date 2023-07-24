@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MapObjects
+namespace MapObjects.Collectables
 {
     public class CoinObject : MapObject
     {

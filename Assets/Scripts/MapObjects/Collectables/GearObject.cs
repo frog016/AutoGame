@@ -1,17 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using MapObjects;
 using UnityEngine;
 
-public class GearObject : MapObject
+namespace MapObjects.Collectables
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public class GearObject : MapObject
     {
-        if (other.CompareTag("car"))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            PlayerPrefs.SetInt("GearsAmount", PlayerPrefs.GetInt("GearsAmount") + 1);
-            Debug.Log("Got a GEAR");
-            Destroy(gameObject);
+            if (other.CompareTag("car"))
+            {
+                PlayerPrefs.SetInt("GearsAmount", PlayerPrefs.GetInt("GearsAmount") + 1);
+                Debug.Log("Got a GEAR");
+                Destroy(gameObject);
+            }
         }
     }
 }

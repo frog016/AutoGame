@@ -7,31 +7,28 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: a13f34cd2d327df479bdc99c11a835df
+    guid: abe59e6ca6d919d4fa4c37b504b79c25
+  - enabled: 1
+    path: Assets/Scenes/LocationMenu.unity
+    guid: 17bd15eed7885194da61e6c224560151
+  - enabled: 1
+    path: Assets/Scenes/CarSelectMenu.unity
+    guid: 748cf7ebac022aa4a86d6a1876bd72aa
+  - enabled: 1
+    path: Assets/Scenes/GarageMenu.unity
+    guid: c14ffc38380c6b3479c40a49004eae4e
+  - enabled: 1
+    path: Assets/Scenes/LevelCity.unity
+    guid: 414971e0fb10734498f8f5e1decb30b9
   - enabled: 1
     path: Assets/Scenes/Car Test.unity
     guid: dd1e27435c2025b4aa0aa8014ffdf9d2
   - enabled: 1
-    path: Assets/Scenes/ShopScene.unity
+    path: Assets/Scenes/Old/ShopScene.unity
     guid: 9140ee3ee4542d140b4e8093a1d6a7bb
   - enabled: 1
-    path: Assets/Scenes/ProgressScene.unity
+    path: Assets/Scenes/Old/ProgressScene.unity
     guid: 20b3172c7abfdc341bae4e2ff1a832e8
-  - enabled: 1
-    path: Assets/Scenes/GarageScene.unity
-    guid: 931485d359600474db6cbb2e605f9ffa
-  - enabled: 1
-    path: Assets/Scenes/GameModeSelection.unity
-    guid: 9304653c63425514aa9aff5d16cb6a86
-  - enabled: 1
-    path: Assets/Scenes/Level_1.unity
-    guid: 4257dc0b63f467949aa274e3e77bc58e
-  - enabled: 1
-    path: Assets/Scenes/AutoSelection.unity
-    guid: 4011028a96b48654f8908a30daa42d63
-  - enabled: 1
-    path: Assets/Scenes/CityPlay.unity
-    guid: bd857d06c7263b24abf8458204810793
   - enabled: 1
     path: Assets/Scenes/Cutscenes Scenes/BedroomCutscene.unity
     guid: 8acc82f6d5a1937469a93f27159d5473
