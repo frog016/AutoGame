@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 896310736668817772}
+  - component: {fileID: 8663837899352548798}
   - component: {fileID: 4255459897877343435}
   - component: {fileID: 4255459897877343436}
   - component: {fileID: 4255459897877343437}
@@ -248,6 +249,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8663837899352548798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896310736668817767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc8e6ca0eb5ceb4cbf57a9ddf3c99b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _car: {fileID: 4255459897877343435}
+  _config: {fileID: 11400000, guid: 49e1a8b79f754b049aa4b687f623ed12, type: 2}
 --- !u!114 &4255459897877343435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,12 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae9cf3ad517ebf448587cc6885617c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <FuelConsumption>k__BackingField: 1
-  _acceleration: 5
   _passiveDeceleration: 5
-  _maxSpeed: 50
-  _fuelCapacity: 10
-  _maxHealth: 1000
   _wheelRadius: 0.375
   _mainWheelJoint: {fileID: 896310736668817761}
   _secondWheelJoint: {fileID: 896310736668817760}

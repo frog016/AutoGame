@@ -22,7 +22,17 @@ namespace UI.Presenter
             var buttonActionPair = _buttons.Zip(upgradeActions, Tuple.Create);
 
             foreach (var (button, action) in buttonActionPair)
-                button.Clicked += parameter => _upgradeSystem.Upgrade(parameter, action);
+            {
+                button.Clicked += UpgradeOnClick;
+
+                void UpgradeOnClick(UpgradableParameterConfig parameter)
+                {
+                    _upgradeSystem.Upgrade(parameter, action);
+
+                    parameter.Upgrade();
+                    button.SetProgress(parameter.CurrentLevel);
+                }
+            }
         }
 
         private static IEnumerable<Action<CarStatsConfig, float>> GetActions()

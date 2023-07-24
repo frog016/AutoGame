@@ -3,7 +3,7 @@
 namespace Driving
 {
     [CreateAssetMenu(menuName = "Data/Car Config", fileName = "{Car Name} Config")]
-    public class CarStatsConfig : ScriptableObject
+    public class CarStatsConfig : UnityEngine.ScriptableObject
     {
         [field: SerializeField] public float Acceleration { get; set; }
         [field: SerializeField] public float MaxSpeed { get; set; }
