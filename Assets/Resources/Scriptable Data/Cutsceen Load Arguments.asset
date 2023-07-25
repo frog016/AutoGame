@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e769f30f036b54cb3ccb64009a8d8d, type: 3}
+  m_Name: Cutsceen Load Arguments
+  m_EditorClassIdentifier: 
+  _cutsceens:
+  - <Name>k__BackingField: 0
+    <State>k__BackingField: 0
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: a81d24593700f1141b1cda604553c6e3, type: 2}
+  - <Name>k__BackingField: 0
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: aac027f478c70fd4a836ecc7ca9e5dca, type: 2}
+  - <Name>k__BackingField: 1
+    <State>k__BackingField: 0
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 5578060dfe9a6bb468dc38d533534e42, type: 2}
+  - <Name>k__BackingField: 1
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 234afc32d516bb145aa35b3ea3c8ec83, type: 2}
+  - <Name>k__BackingField: 2
+    <State>k__BackingField: 0
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 48c93bea5d1b24a4993c29a97f3184d3, type: 2}
+  - <Name>k__BackingField: 2
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: da56ad4d232de2e47a012c1d2d737c2e, type: 2}
+  - <Name>k__BackingField: 3
+    <State>k__BackingField: 0
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 01f1c6e61001aad4d96b6b526c049d92, type: 2}
+  - <Name>k__BackingField: 3
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 80aabaa37b1970948abdd8478c148f32, type: 2}
+  _cutsceenName: 0
+  _state: 0
