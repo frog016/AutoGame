@@ -571,7 +571,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
---- !u!43 &195041491
+--- !u!43 &162140804
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3437,8 +3437,9 @@ MonoBehaviour:
   curveSmoothness: 1
   noiseStep: 10.51
   bottom: 10
-  obstacles: []
+  collectables: []
   obstacleFrequency: 0
+  obstacles: []
 --- !u!114 &951770868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5076,8 +5077,9 @@ MonoBehaviour:
   curveSmoothness: 0.5
   noiseStep: 0.5
   bottom: 10
-  obstacles: []
+  collectables: []
   obstacleFrequency: 0
+  obstacles: []
 --- !u!1 &1167498908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7345,7 +7347,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763993249}
-  m_Mesh: {fileID: 195041491}
+  m_Mesh: {fileID: 162140804}
 --- !u!4 &1763993252
 Transform:
   m_ObjectHideFlags: 0

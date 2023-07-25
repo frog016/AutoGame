@@ -3229,6 +3229,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1465383231}
+        m_TargetAssemblyTypeName: UI.Menu.CarSelectArrow, Assembly-CSharp
+        m_MethodName: OnButtonArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465383229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3351,7 +3363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u041D\u0415\u0414\u041E\u0420\u041E\u0416\u041D\u0418\u041A"
+  m_Text: "\u0414\u0416\u0418\u041F"
 --- !u!222 &1480886111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3488,7 +3500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0414\u0436\u0438\u043F"
+  m_Text: "\u0412\u041D\u0415\u0414\u041E\u0420\u041E\u0416\u041D\u0418\u041A"
 --- !u!222 &1699555356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3678,6 +3690,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1819410299}
         m_TargetAssemblyTypeName: PanelOpen, Assembly-CSharp
         m_MethodName: OpenPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1819410303}
+        m_TargetAssemblyTypeName: UI.Menu.CarSelectArrow, Assembly-CSharp
+        m_MethodName: OnButtonArrow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4193,6 +4217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ce326991530344b98bca4e11f1fb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sedanPanel: {fileID: 2018387614}
+  jeepPanel: {fileID: 286778619}
+  offroadPanel: {fileID: 779892603}
 --- !u!1 &1999307710
 GameObject:
   m_ObjectHideFlags: 0
