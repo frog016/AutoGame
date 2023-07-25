@@ -37,5 +37,11 @@ MonoBehaviour:
   - <Name>k__BackingField: 3
     <State>k__BackingField: 1
     <PlayableClip>k__BackingField: {fileID: 7400000, guid: 80aabaa37b1970948abdd8478c148f32, type: 2}
+  - <Name>k__BackingField: 4
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 8e780d4c5900edb409d6adada47677fa, type: 2}
+  - <Name>k__BackingField: 5
+    <State>k__BackingField: 1
+    <PlayableClip>k__BackingField: {fileID: 7400000, guid: 99a7f7ed337099a469c74dcc97f462eb, type: 2}
   _cutsceenName: 0
   _state: 0

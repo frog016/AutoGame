@@ -5,6 +5,8 @@
         Friend,
         Pharmacy,
         Shop,
-        Vet
+        Vet,
+        BrokeCar,
+        FuelLose
     }
 }
