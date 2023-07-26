@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using ScriptableObject;
+using UnityEngine;
 
 namespace Driving
 {
     [CreateAssetMenu(menuName = "Data/Car Config", fileName = "{Car Name} Config")]
-    public class CarStatsConfig : UnityEngine.ScriptableObject
+    public class CarStatsConfig : SerializableScriptableObject
     {
         [field: SerializeField] public float Acceleration { get; set; }
         [field: SerializeField] public float MaxSpeed { get; set; }
