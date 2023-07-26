@@ -16,6 +16,7 @@ namespace Driving
         private void Awake()
         {
             _car = GetComponent<Car>();
+            _buttons = FindObjectsOfType<MoveButton>();
             _inputSystem = new ButtonsInputSystem(_buttons[0], _buttons[1]);
         }
 

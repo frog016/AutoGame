@@ -1642,7 +1642,7 @@ MonoBehaviour:
   - mapObject: {fileID: 667361816106699200, guid: 29bb3eed227ce204eab455531ab87534, type: 3}
     chance: 30
   - mapObject: {fileID: 8769160222984338556, guid: 3497d19508761f74bb0f502f7f250018, type: 3}
-    chance: 15
+    chance: 10
   - mapObject: {fileID: 4202626445453273041, guid: 4ad4fc3f13298d34280136f89c4096f7, type: 3}
     chance: 5
   obstacleFrequency: 10

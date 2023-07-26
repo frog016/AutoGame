@@ -53,7 +53,7 @@ namespace Road
                 if (areObstSpawning && i % obstacleFrequency == 0)
                 {
                     // 0 - barrel, 1 - brick, 2 - gravel, 3 - hatch, 4 - policepost
-                    //var obstacle = Instantiate(obstacles[0], lastPos, Quaternion.identity, transform); 
+                    //var obstacle = Instantiate(obstacles[1], lastPos, Quaternion.identity, transform); 
                     var obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Count)], lastPos, Quaternion.identity, transform);
                     const float horizontalDifference = 3.0f;
                     obstacle.transform.localPosition = lastPos + new Vector3(horizontalDifference, 0.0f) + obstacle.GetComponent<MapObject>().GetSpawnOffset();
@@ -66,10 +66,8 @@ namespace Road
             spriteShapeController.spline.InsertPointAt(levelLength + 1, new Vector3(transform.position.x, transform.position.y - bottom));
 
             var splinePointCount = spriteShapeController.spline.GetPointCount();
-            for (var i = 0; i < splinePointCount; i++)
+            for (var i = 1; i < splinePointCount - 3; i++)
             {
-                if (i == 0 || i == levelLength - 1) continue;
-            
                 spriteShapeController.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
                 spriteShapeController.spline.SetLeftTangent(i, Vector3.left * xMultiplier * curveSmoothness);
                 spriteShapeController.spline.SetRightTangent(i, Vector3.right * xMultiplier * curveSmoothness);

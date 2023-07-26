@@ -10,6 +10,7 @@ namespace UI.Presenter
 
         private void Start()
         {
+            Car = FindObjectOfType<Driving.Car>();
             Initialize();
             Subscribe();
         }

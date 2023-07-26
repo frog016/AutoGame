@@ -17,6 +17,11 @@ namespace UI
         public RectTransform arrow;
 
         private float speed = 0.0f;
+
+        public void Start()
+        {
+            car = FindObjectOfType<Driving.Car>();
+        }
         private void Update()
         {
             speed = car.MainWheel.VelocityInKmph.magnitude;

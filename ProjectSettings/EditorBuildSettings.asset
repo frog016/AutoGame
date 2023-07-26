@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GarageMenu.unity
     guid: c14ffc38380c6b3479c40a49004eae4e
   - enabled: 1
+    path: Assets/Scenes/CutscenePlayer.unity
+    guid: c79566c3db24c5a47a6a75695233880a
+  - enabled: 1
     path: Assets/Scenes/LevelCity.unity
     guid: 414971e0fb10734498f8f5e1decb30b9
   - enabled: 1
