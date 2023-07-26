@@ -28,7 +28,7 @@ namespace Health
             var collisionForce = GetCollisionForce(collision);
             var damage = Mathf.FloorToInt(Vector2.Scale(collisionForce, _damageCoefficient).magnitude);
             _carBody.ApplyDamage(damage);
-            //Debug.Log("Col damage: " + damage);
+            Debug.Log("Col damage: " + damage);
             
             StartCoroutine(Restart());
         }
@@ -46,7 +46,7 @@ namespace Health
             var maxVelocity = Vector2.zero;
             foreach (var contact in collision.contacts)
             {
-                var projection = Vector3.Project(collision.relativeVelocity, contact.normal);
+                var projection = Vector3.Project(contact.relativeVelocity, contact.normal);
                 if (projection.magnitude > maxVelocity.magnitude)
                     maxVelocity = projection;
             }

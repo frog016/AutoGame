@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6860157cdb4f1e044b39fb9388fe59dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageCoefficient: {x: 0.1, y: 0.01}
+  _damageCoefficient: {x: 0.1, y: 0.05}
 --- !u!50 &896310736668817762
 Rigidbody2D:
   serializedVersion: 4

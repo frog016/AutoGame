@@ -608,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30375, y: 0.5931502}
   m_AnchorMax: {x: 0.6962501, y: 0.711}
-  m_AnchoredPosition: {x: 1.4940033, y: 192.82}
+  m_AnchoredPosition: {x: 1.493988, y: 192.82}
   m_SizeDelta: {x: 335.1479, y: 31.836792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224102824
@@ -6584,11 +6584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326403058418514912, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403058418514912, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403058418514912, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6600,7 +6600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326403058418514912, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403058508532570, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6628,11 +6628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326403059514186626, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403059514186626, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403059514186626, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6644,7 +6644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326403059514186626, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326403059648438271, guid: f3204aae598d48f40abe3be865562245, type: 3}
       propertyPath: car
