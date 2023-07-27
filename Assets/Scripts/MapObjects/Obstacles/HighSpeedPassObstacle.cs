@@ -12,7 +12,9 @@ namespace MapObjects.Obstacles
         {
             if (other.CompareTag("car"))
             {
-                var car = other.GetComponent<Driving.Car>();
+                var car = other.gameObject.GetComponent<Driving.Car>();
+				if (car == null)
+					car = other.gameObject.transform.parent.GetComponent<Driving.Car>();
                 var carSpeed = car.MainWheel.VelocityInKmph.magnitude;
                 
                 if (carSpeed < speedLimit)

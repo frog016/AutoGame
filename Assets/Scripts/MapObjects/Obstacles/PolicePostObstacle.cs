@@ -11,15 +11,22 @@ namespace MapObjects.Obstacles
         {
             if (other.CompareTag("car"))
             {
-                var car = other.GetComponent<Driving.Car>();
+                var car = other.gameObject.GetComponent<Driving.Car>();
+				if (car == null)
+					car = other.gameObject.transform.parent.GetComponent<Driving.Car>();
                 var carSpeed = car.MainWheel.VelocityInKmph.magnitude;
-
+				var moneyReduction = 1 + (int)carSpeed - 20;
+				
                 if (carSpeed > speedLimit)
                 {
-					if (PlayerPrefs.GetInt("CoinsAmount") <= 0)
+					if (PlayerPrefs.GetInt("CoinsAmount") - moneyReduction <= 0)
+					{
+						PlayerPrefs.SetInt("CoinsAmount", 0);
 						return;
+					}
+						
 					
-                    PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoindAmount") - (1 + (int)carSpeed - 20));
+                    PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoindAmount") - moneyReduction);
                     //Debug.Log("Lost money to POLICEPOST");
                 }
             }

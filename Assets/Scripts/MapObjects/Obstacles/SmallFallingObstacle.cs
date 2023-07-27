@@ -11,7 +11,10 @@ namespace MapObjects.Obstacles
         {
             if (other.gameObject.CompareTag("car"))
             {
-                other.gameObject.GetComponent<Driving.Car>().Health.ApplyDamage(damage);
+				var car = other.gameObject.GetComponent<Driving.Car>();
+				if (car == null)
+					car = other.gameObject.transform.parent.GetComponent<Driving.Car>();
+				car.Health.ApplyDamage(damage);
                 //Debug.Log("Lost health to BRICK");
                 Destroy(gameObject);
             }
