@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5470
+  controlID: 21685
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 5471
+  controlID: 21686
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5472
+  controlID: 21687
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,21 +226,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b2c0ffff6ec1ffffbefaffffeafaffffb09c0000
+      m_ExpandedIDs: 1ea6ffff5ea6ffff9ea6ffff36a9ffff96a9ffffd6a9ffffe8aaffff40abffff80abffffc2abffff68aeffff2eafffff82afffff10b0ffff6eb0ffff94b5ffff30b6ffff5cb6ffffb2c0ffff6ec1ffffbefaffffeafaffffb09c00002ab5000070d300008cd30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: RoadManager
-        m_OriginalName: RoadManager
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 25254
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -526,9 +526,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.181061, y: 3.9314775, z: 99.058945}
+    m_Target: {x: -0.9866173, y: 3.120996, z: 0.96332425}
     speed: 2
-    m_Value: {x: 4.181061, y: 3.9314775, z: 99.058945}
+    m_Value: {x: -0.9866173, y: 3.120996, z: 0.96332425}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.500513
+    m_Target: 10.2029085
     speed: 2
-    m_Value: 11.500513
+    m_Value: 10.2029085
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -793,22 +793,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources/Prefabs
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\Ilya\Practise\Project\AutoGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 600}
-    m_SelectedIDs: 94670000
-    m_LastClickedID: 26516
-    m_ExpandedIDs: 000000008467000086670000886700008a6700008c6700008e670000906700009267000094670000386c0000b46c0000ce6c000000ca9a3b
+    scrollPos: {x: 0, y: 128}
+    m_SelectedIDs: 8a670000
+    m_LastClickedID: 26506
+    m_ExpandedIDs: 000000008467000086670000886700008a6700008c6700008e67000090670000926700009467000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -861,9 +861,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 486d0000
-    m_LastClickedInstanceID: 27976
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 88d20000
+    m_LastClickedInstanceID: 53896
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002e8c00007c660000e26700007e660000a66800009e670000ba620000700601004213010048130100b21c01006208010008640000866300000c6400008e660000dc670000dc640000f69f00006ebb0000e4640000fe6300001063000000000000d865000034660000c26a0000026600000c660000106600007a70000082700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -970,8 +970,8 @@ MonoBehaviour:
     y: 0
     width: 378
     height: 1291
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 27976
+  m_LastInspectedObjectInstanceID: 53896
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

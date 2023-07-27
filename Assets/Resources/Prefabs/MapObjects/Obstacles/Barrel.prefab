@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 8064578617909888833}
   - component: {fileID: 2425067928412667765}
   - component: {fileID: 303617853572938616}
-  - component: {fileID: 8664033655549637405}
+  - component: {fileID: 361406560840494357}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnOffset: {x: 0, y: 13, z: 0}
   damage: 200
---- !u!61 &8664033655549637405
+--- !u!61 &361406560840494357
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,5 +219,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.99, y: 4.48}
+  m_Size: {x: 2.392, y: 3.584}
   m_EdgeRadius: 0
