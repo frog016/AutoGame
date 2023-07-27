@@ -8,7 +8,7 @@ namespace Upgrade
     {
         private readonly CarStatsConfig _carStats;
 
-        private static readonly string CostKey = "CoinsAmount";
+        private const string CostKey = "CoinsAmount";
 
         public UpgradeSystem(CarStatsConfig config)
         {
