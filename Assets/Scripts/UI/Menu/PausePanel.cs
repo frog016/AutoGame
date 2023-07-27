@@ -22,6 +22,7 @@ public class PausePanel : MonoBehaviour
 
     public void OnButtonRestart()
     {
+		Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

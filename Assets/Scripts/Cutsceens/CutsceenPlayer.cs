@@ -9,6 +9,7 @@ namespace Cutsceens
 
         private void Awake()
         {
+			Time.timeScale = 1;
             PlayCutsceen();
         }
 
