@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOffset: {x: 0, y: 0.1, z: 0}
-  damage: 30
+  damage: 100
+  speedLimit: 20
 --- !u!60 &48788856346801269
 PolygonCollider2D:
   m_ObjectHideFlags: 0

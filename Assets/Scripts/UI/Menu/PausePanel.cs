@@ -11,11 +11,13 @@ public class PausePanel : MonoBehaviour
     public void OnButtonPause()
     {
         pausePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void OnButtonResume()
     {
         pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void OnButtonRestart()

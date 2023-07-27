@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOffset: {x: 0, y: 0.1, z: 0}
-  damage: 20
+  damage: 200
   speedLimit: 30
 --- !u!61 &7199348177036763714
 BoxCollider2D:

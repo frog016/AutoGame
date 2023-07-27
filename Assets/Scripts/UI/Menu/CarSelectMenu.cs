@@ -1,11 +1,15 @@
 using System;
+using Cutsceens;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 namespace UI.Menu
 {
     public class CarSelectMenu : MonoBehaviour
     {
+        [SerializeField] private CutsceenLoadArguments cutsceenLoader;
+        
         [SerializeField] private GameObject sedanPanel;
         [SerializeField] private GameObject jeepPanel;
         [SerializeField] private GameObject offroadPanel;
@@ -39,7 +43,10 @@ namespace UI.Menu
 
         public void OnButtonStart()
         {
-            SceneManager.LoadScene("LevelCity");
+            ChoiceManager.CurrentCutscene = (CutsceenName)Random.Range(0, 4);
+            cutsceenLoader.LoadCutsceenArgs(ChoiceManager.CurrentCutscene, CutsceenLoadArguments.CutsceenState.Start);
+            SceneManager.LoadScene("CutscenePlayer");
+            //SceneManager.LoadScene("LevelCity");
         }
 
         public void OnButtonGarage()

@@ -2,7 +2,7 @@
 {
     public enum CutsceenName
     {
-        Friend,
+        Friend = 0,
         Pharmacy,
         Shop,
         Vet,

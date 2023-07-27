@@ -17,7 +17,7 @@ namespace MapObjects.Obstacles
                 if (carSpeed > speedLimit)
                 {
                     PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") - (1 + (int)carSpeed - 20));
-                    Debug.Log("Lost money to POLICEPOST");
+                    //Debug.Log("Lost money to POLICEPOST");
                 }
             }
         }

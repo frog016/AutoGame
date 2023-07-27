@@ -9,7 +9,7 @@ namespace MapObjects.Collectables
             if (other.CompareTag("car"))
             {
                 PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoinsAmount") + 1);
-                Debug.Log("Got a COIN");
+                //Debug.Log("Got a COIN");
                 Destroy(gameObject);
             }
         }

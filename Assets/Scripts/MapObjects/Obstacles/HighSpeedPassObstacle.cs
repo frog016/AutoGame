@@ -15,10 +15,10 @@ namespace MapObjects.Obstacles
                 var car = other.GetComponent<Driving.Car>();
                 var carSpeed = car.MainWheel.VelocityInKmph.magnitude;
                 
-                if (carSpeed > speedLimit)
+                if (carSpeed < speedLimit)
                 {
                     car.Health.ApplyDamage(damage);
-                    Debug.Log("Lost health to GRAVEL");
+                    //Debug.Log("Lost health to GRAVEL");
                 }
             }
         }

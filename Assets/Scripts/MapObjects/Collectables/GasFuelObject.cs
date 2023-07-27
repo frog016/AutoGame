@@ -12,7 +12,7 @@ namespace MapObjects.Collectables
             {
                 var carFuelTank = other.GetComponent<Driving.Car>().FuelTank;
                 carFuelTank.Refuel(carFuelTank.FuelCapacity / refuelFractionOfMax);
-                Debug.Log("Got some FUEL");
+                //Debug.Log("Got some FUEL");
                 Destroy(gameObject);
             }
         }

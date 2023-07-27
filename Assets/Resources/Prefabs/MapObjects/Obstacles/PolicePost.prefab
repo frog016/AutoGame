@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOffset: {x: 0, y: 2.95, z: 0}
-  speedLimit: 20
+  speedLimit: 40
 --- !u!212 &6191260079275017442
 SpriteRenderer:
   m_ObjectHideFlags: 0
