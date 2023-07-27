@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Factor>k__BackingField: 1.1
   <MaxUpgradeLevel>k__BackingField: 5
+  <CurrentLevel>k__BackingField: 0
+  <Cost>k__BackingField: 1
   <Name>k__BackingField: "\u0423\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435"

@@ -21,6 +21,8 @@ namespace Upgrade
                 return;
 
             upgradeAction.Invoke(_carStats, config.Factor);
+            config.Upgrade();
+
             var value = PlayerPrefs.GetInt(CostKey) - config.Cost;
             PlayerPrefs.SetInt(CostKey, value);
         }

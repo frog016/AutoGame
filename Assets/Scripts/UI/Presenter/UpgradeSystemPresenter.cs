@@ -14,6 +14,14 @@ namespace UI.Presenter
         
         private UpgradeSystem _upgradeSystem;
 
+        private void Start()
+        {
+            foreach (var button in _buttons)
+            {
+                button.SetProgress(button.Config.CurrentLevel);
+            }
+        }
+
         public void Initialize(CarStatsConfig config)
         {
             _upgradeSystem = new UpgradeSystem(config);
@@ -28,8 +36,6 @@ namespace UI.Presenter
                 void UpgradeOnClick(UpgradableParameterConfig parameter)
                 {
                     _upgradeSystem.Upgrade(parameter, action);
-
-                    parameter.Upgrade();
                     button.SetProgress(parameter.CurrentLevel);
                 }
             }

@@ -12,18 +12,17 @@ namespace UI.View
         [SerializeField] private TextMeshProUGUI _parameterNameText;
         [SerializeField] private TextMeshProUGUI _upgradeProgressText;
 
+        public UpgradableParameterConfig Config { get; private set; }
         public event Action<UpgradableParameterConfig> Clicked;
-        
-        private UpgradableParameterConfig _config;
 
         public void Initialize(UpgradableParameterConfig config)
         {
-            _config = config;
+            Config = config;
         }
 
         private void Start()
         {
-            _parameterNameText.text = _config.Name;
+            _parameterNameText.text = Config.Name;
             _button.onClick.AddListener(OnButtonClick);
         }
 
@@ -34,12 +33,12 @@ namespace UI.View
 
         public void SetProgress(int currentLevel)
         {
-            _upgradeProgressText.text = $"{currentLevel} / {_config.MaxUpgradeLevel}";
+            _upgradeProgressText.text = $"{currentLevel} / {Config.MaxUpgradeLevel}";
         }
 
         private void OnButtonClick()
         {
-            Clicked?.Invoke(_config);
+            Clicked?.Invoke(Config);
         }
     }
 }
